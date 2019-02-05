@@ -25,7 +25,7 @@ class Book(models.Model):
   image = fields.Binary(string='Cover')
   publisher_id = fields.Many2one('res.partner', string='Publisher')
   author_ids = fields.Many2many('res.partner', string='Authors')
-
+  
   @api.multi
   def button_check_isbn(self):
     for book in self:
